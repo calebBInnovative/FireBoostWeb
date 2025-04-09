@@ -5,4 +5,11 @@ export type Game = {
     icon: string;
     cover: string;
     services: string[];
+    regions: string[];
+    modes: string[];
+    points: number[];
+    ranks: {
+        tier: string;
+        divisions: string[];
+    }[];
 };
