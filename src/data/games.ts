@@ -4,8 +4,8 @@ export const games = [
     id: "lol",
     name: "League of Legends",
     icon: "/games/lol/navbarIcon.png",
-    cover: "/games/lol/cover.webp",
-    services: ["Rank Boost", "Win Boost", "Placement Matches"],
+    cover: "/games/lol/cover.jpg",
+    services: ["Games", "Division Boost", "Leveling", "Net Wins", "Normal Wins", "Placements"],
     regions: ["NA", "EUW"],
     modes: ["Solo/Duo", "Flex"],
     ranks: [
@@ -18,14 +18,15 @@ export const games = [
       { tier: "Diamond", divisions: ["IV", "III", "II", "I"] },
       { tier: "Master", divisions: [] },
     ],
-    points: Array.from({ length: 5 }, (_, i) => i * 20), // 0, 20, 40, 60, 80
+    points: Array.from({ length: 5 }, (_, i) => i * 20),
+    useTierOnlyIcons: true, // 👈 Esto indica que solo se usa la imagen del tier, sin división
   },
   {
     id: "valorant",
-    name: "Valorant",
+    name: "Valorant", 
     icon: "/games/valorant/navbarIcon.png",
-    cover: "/games/valorant/cover.jpeg",
-    services: ["Rank Boost", "Win Boost", "Placement Matches"],
+    cover: "/games/valorant/cover.avif",
+    services: ["Duo Games", "Net Wins", "Placements", "Rank Boost", "Unrated Wins"],
     regions: ["NA", "EUW"],
     modes: ["Solo/Duo"],
     ranks: [
@@ -40,5 +41,6 @@ export const games = [
       { tier: "Radiant", divisions: [] },
     ],
     points: Array.from({ length: 5 }, (_, i) => i * 20),
+    useTierOnlyIcons: false, // 👈 Valorant sí tiene imágenes por división
   },
 ];
